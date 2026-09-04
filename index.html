@@ -1,0 +1,397 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyond the Screen | Decency to the World Picnic 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="description" content="Decency to the World Picnic 2026 — Beyond the Screen. We Meet. We Connect. We Become.">
+<style>
+:root {
+  --purple:#3B064A;
+  --purple2:#5A0A68;
+  --purple3:#8E20A0;
+  --red:#C51F2A;
+  --gold:#ffd35a;
+  --ink:#180e1d;
+  --white:#fff;
+  --soft:#f8f4fa;
+  --glass:rgba(255,255,255,.10);
+  --glass-border:rgba(255,255,255,.22);
+  --shadow:0 22px 70px rgba(30,0,45,.20);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Poppins", ui-sans-serif, system-ui, sans-serif;
+  color:var(--ink);
+  background:var(--soft);
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:min(1120px,92%);margin:auto}
+.glow{position:absolute;border-radius:50%;filter:blur(70px);opacity:.45;pointer-events:none}
+.g1{width:360px;height:360px;background:#b71bd0;top:4%;right:-100px}
+.g2{width:300px;height:300px;background:#ef2c32;bottom:0;left:-120px}
+nav{
+  position:fixed;z-index:50;top:16px;left:50%;transform:translateX(-50%);
+  width:min(1050px,92%);padding:10px 14px;border:1px solid var(--glass-border);
+  background:rgba(31,3,39,.55);backdrop-filter:blur(20px);border-radius:999px;
+  display:flex;align-items:center;justify-content:space-between;color:#fff;box-shadow:0 12px 40px rgba(0,0,0,.18)
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800}
+.brand img{width:42px;height:42px;border-radius:50%}
+.navlinks{display:flex;gap:22px;font-size:13px;opacity:.9}
+.navlinks a:hover{opacity:.65}
+.navbtn,.cta{
+  border:0;cursor:pointer;border-radius:999px;padding:13px 19px;color:#fff;font-weight:800;
+  background:linear-gradient(135deg,var(--purple2),var(--purple3));box-shadow:0 10px 30px rgba(90,10,104,.30);
+  transition:.25s transform,.25s box-shadow
+}
+.navbtn:hover,.cta:hover{transform:translateY(-2px);box-shadow:0 15px 35px rgba(90,10,104,.38)}
+
+.hero{
+  min-height:100vh;display:grid;place-items:center;position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 75% 35%, rgba(166,20,191,.55), transparent 28%),
+    radial-gradient(circle at 15% 75%, rgba(229,35,35,.24), transparent 26%),
+    linear-gradient(135deg,#23002d,#4b075d 48%,#19001f);
+  color:#fff;padding:130px 0 80px
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;position:relative;z-index:2}
+.eyebrow{letter-spacing:.18em;font-size:12px;font-weight:800;text-transform:uppercase;opacity:.75}
+.hero h1{font-size:clamp(56px,9vw,112px);line-height:.84;letter-spacing:-.065em;margin:18px 0}
+.hero h1 span{color:var(--gold)}
+.hero .tagline{font-size:clamp(18px,2.5vw,27px);font-weight:700;margin:0 0 18px}
+.hero p{max-width:640px;font-size:17px;line-height:1.75;color:rgba(255,255,255,.78)}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.ghost{padding:13px 19px;border:1px solid rgba(255,255,255,.3);border-radius:999px;background:rgba(255,255,255,.07);color:#fff;cursor:pointer;backdrop-filter:blur(12px)}
+.hero-card{
+  border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.09);backdrop-filter:blur(22px);
+  border-radius:30px;padding:28px;box-shadow:var(--shadow);transform:rotate(2deg)
+}
+.hero-card img{width:100%;border-radius:20px;display:block}
+.detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.detail{padding:15px;border:1px solid rgba(255,255,255,.16);border-radius:17px;background:rgba(255,255,255,.07)}
+.detail small{display:block;opacity:.6;font-size:10px;letter-spacing:.12em}
+.detail strong{display:block;margin-top:6px;font-size:14px}
+.badge{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);font-size:12px;font-weight:800}
+
+section{padding:95px 0}
+.section-head{max-width:760px;margin-bottom:40px}
+.kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:900;color:var(--purple2)}
+h1,h2,h3,.theme-word,.brand,.navbtn,.cta,.float-btn,.kicker,.eyebrow{font-family:"Bricolage Grotesque", sans-serif}
+h1,h2{font-weight:800}
+h2{font-size:clamp(38px,6vw,70px);line-height:.95;letter-spacing:-.045em;margin:10px 0 18px;color:var(--purple)}
+.lead{font-size:18px;line-height:1.75;color:#665d68}
+.glass-dark{
+  background:linear-gradient(135deg,rgba(59,6,74,.96),rgba(104,16,122,.88));color:#fff;border-radius:35px;
+  border:1px solid rgba(255,255,255,.16);box-shadow:var(--shadow);position:relative;overflow:hidden
+}
+.glass-dark h2{color:#fff}
+.glass-dark .lead{color:rgba(255,255,255,.72)}
+
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{padding:28px;border-radius:25px;background:#fff;border:1px solid rgba(59,6,74,.1);box-shadow:0 15px 45px rgba(59,6,74,.08)}
+.card.glass{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);backdrop-filter:blur(16px)}
+.icon{font-size:30px}
+.card h3{margin:14px 0 8px;font-size:21px}
+.card p{line-height:1.7;color:#706773}
+.glass .card p{color:rgba(255,255,255,.72)}
+
+.theme{padding:65px}
+.theme-grid{display:grid;grid-template-columns:1fr .8fr;gap:35px;align-items:center}
+.theme-word{font-size:clamp(48px,8vw,100px);font-weight:950;letter-spacing:-.07em;line-height:.8;color:#fff}
+.theme-word span{color:var(--purple3)}
+.quote{padding:26px;border-left:3px solid var(--purple3);background:rgba(255,255,255,.06);border-radius:0 20px 20px 0;color:rgba(255,255,255,.82);line-height:1.7}
+
+.expects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.expect{padding:25px;border-radius:24px;background:rgba(255,255,255,.62);border:1px solid rgba(59,6,74,.1);backdrop-filter:blur(14px)}
+.expect b{color:var(--purple)}
+
+.flyer-wrap{max-width:720px;margin:auto;padding:16px;border-radius:35px;background:rgba(255,255,255,.65);border:1px solid rgba(59,6,74,.12);box-shadow:var(--shadow)}
+.flyer-wrap img{width:100%;border-radius:23px;display:block}
+
+.support{background:linear-gradient(135deg,#27002f,#5e0b6d);color:#fff;position:relative;overflow:hidden}
+.support .section-head .kicker{color:#ffd35a}
+.support h2{color:#fff}
+.support .lead{color:rgba(255,255,255,.75)}
+.payment{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px}
+.account{padding:30px;border-radius:28px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(20px)}
+.account-row{padding:15px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.account-row:last-child{border-bottom:0}
+.account-row small{display:block;opacity:.58;font-size:10px;letter-spacing:.15em}
+.account-row strong{font-size:19px;display:block;margin-top:5px}
+.copy{margin-top:14px;width:100%;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;padding:13px;border-radius:14px;cursor:pointer}
+.steps{display:grid;gap:12px}
+.step{display:flex;gap:16px;align-items:flex-start;padding:20px;border-radius:22px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13)}
+.num{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:var(--red);font-weight:900;flex:none}
+.step h3{margin:0 0 6px}
+.step p{margin:0;color:rgba(255,255,255,.7);line-height:1.6}
+.whatsapp-btn,.proof-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  margin-top:14px;padding:11px 15px;border-radius:999px;
+  color:#fff;background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.24);font-weight:800;font-size:13px;
+  transition:.25s transform,.25s background;backdrop-filter:blur(12px)
+}
+.whatsapp-btn:hover,.proof-btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.17)}
+.proof-cta{
+  margin-top:22px;padding:25px 28px;border-radius:26px;
+  display:flex;align-items:center;justify-content:space-between;gap:22px;
+  background:linear-gradient(135deg,rgba(59,6,74,.96),rgba(104,16,122,.90));
+  color:#fff;border:1px solid rgba(255,255,255,.15);box-shadow:var(--shadow)
+}
+.proof-cta h3{margin:6px 0;font-size:24px}
+.proof-cta p{margin:0;color:rgba(255,255,255,.7);line-height:1.6;max-width:650px}
+.proof-btn{background:rgba(255,255,255,.14);white-space:nowrap}
+
+
+.form-box{background:#fff;border-radius:30px;padding:15px;box-shadow:var(--shadow);overflow:hidden}
+.form-box iframe{min-height:850px;border:0}
+
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+details{background:#fff;border:1px solid rgba(59,6,74,.1);border-radius:18px;padding:18px 20px}
+summary{cursor:pointer;font-weight:800;color:var(--purple)}
+details p{color:#6b636d;line-height:1.65}
+
+.final{padding:100px 0;background:linear-gradient(135deg,#3b064a,#72107e);color:#fff;text-align:center;position:relative;overflow:hidden}
+.final h2{color:#fff;max-width:850px;margin:12px auto 18px}
+.final p{color:rgba(255,255,255,.72);font-size:18px}
+.final .cta{margin-top:20px}
+
+footer{padding:35px 0;background:#17001d;color:rgba(255,255,255,.65)}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.footer-brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800}
+.footer-brand img{width:44px;height:44px;border-radius:50%}
+
+.floating{position:fixed;z-index:45;right:22px;bottom:22px}
+.float-btn{border:0;border-radius:999px;padding:15px 20px;background:linear-gradient(135deg,var(--purple2),var(--purple3));color:#fff;font-weight:900;box-shadow:0 16px 45px rgba(90,10,104,.38);cursor:pointer;animation:float 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+
+.celebrate{position:fixed;inset:0;pointer-events:none;z-index:100;overflow:hidden}
+.emoji{position:absolute;font-size:30px;animation:burst 1.15s ease-out forwards}
+@keyframes burst{0%{transform:translate(0,0) scale(.3);opacity:0}15%{opacity:1}100%{transform:translate(var(--x),var(--y)) rotate(var(--r)) scale(1.15);opacity:0}}
+
+@media(max-width:800px){
+  nav{top:9px}
+  .navlinks{display:none}
+  .hero{padding-top:110px}
+  .hero-grid,.theme-grid,.payment{grid-template-columns:1fr}
+  .hero-card{transform:none;max-width:560px;margin:auto}
+  .three,.expects{grid-template-columns:1fr}
+  .faq{grid-template-columns:1fr}
+  section{padding:70px 0}
+  .theme{padding:35px 24px}
+  .detail-grid{grid-template-columns:1fr}
+  .footer-inner{flex-direction:column;text-align:center}
+  .floating{right:12px;left:12px;bottom:12px}
+  .float-btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="#top"><img src="decency-logo-round.png" alt="Decency to the World logo"><span>DECENCY TO THE WORLD</span></a>
+  <div class="navlinks">
+    <a href="#about">About</a><a href="#experience">Experience</a><a href="#support">Support</a><a href="#faq">FAQ</a>
+  </div>
+  <button class="navbtn" onclick="goDonate()">Donate & Register</button>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">DECENCY TO THE WORLD • PICNIC 2026</span>
+      <div class="eyebrow" style="margin-top:25px">THEME</div>
+      <h1>DTW PICNIC</h1>
+      <div class="tagline">We Meet. We Connect. We Become.</div>
+      <p>Social media can connect us, but real relationships are built in real moments. Step beyond the screen, meet people, share experiences and create memories together.</p>
+      <div class="hero-actions">
+        <button class="cta" onclick="goDonate()">🎉 Donate & Register</button>
+        <button class="ghost" onclick="document.querySelector('#about').scrollIntoView()">Explore the event</button>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img src="official-flyer.jpg" alt="Official Beyond the Screen Picnic flyer">
+      <div class="detail-grid">
+        <div class="detail"><small>DATE</small><strong>Sunday, 20 Sept. 2026</strong></div>
+        <div class="detail"><small>TIME</small><strong>12:00 PM</strong></div>
+        <div class="detail"><small>VENUE</small><strong>Communicated to participants</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">WHY THIS PICNIC</div>
+      <h2>This is more than a picnic.</h2>
+      <p class="lead">Beyond the Screen is a social experience created to help people step away from digital interactions and experience genuine human connection.</p>
+    </div>
+    <div class="three">
+      <div class="card"><div class="icon">🤝</div><h3>We Meet</h3><p>Meet new people and create genuine connections outside your usual circle.</p></div>
+      <div class="card"><div class="icon">💬</div><h3>We Connect</h3><p>Share conversations, experiences and moments that matter beyond likes and comments.</p></div>
+      <div class="card"><div class="icon">🌱</div><h3>We Become</h3><p>Grow through community, friendship, shared experiences and meaningful interaction.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="glass-dark theme">
+      <div class="theme-grid">
+        <div>
+          <div class="kicker" style="color:#ffd35a">THIS YEAR'S THEME</div>
+          <div class="theme-word">BEYOND<br><span>THE SCREEN</span></div>
+        </div>
+        <div class="quote">We live in a world where conversations happen through screens and friendships are often built through profiles. This picnic is an invitation to step beyond that. Put down the phone. Look around. Meet someone. Start a conversation. Build something real.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">THE EXPERIENCE</div>
+      <h2>Come for the picnic. Stay for the connections.</h2>
+      <p class="lead">Expect an atmosphere built around people, conversations, fun and memorable experiences.</p>
+    </div>
+    <div class="expects">
+      <div class="expect"><b>🎯 Interactive Activities</b><br><span>Fun experiences designed to get people involved.</span></div>
+      <div class="expect"><b>🤝 Meaningful Connections</b><br><span>Meet people outside your usual circle.</span></div>
+      <div class="expect"><b>💬 Real Conversations</b><br><span>Create space for conversations that go beyond social media.</span></div>
+      <div class="expect"><b>🎵 Music & Entertainment</b><br><span>Good energy, good atmosphere and memorable moments.</span></div>
+      <div class="expect"><b>🌱 Personal Growth</b><br><span>Learn, share and grow through community.</span></div>
+      <div class="expect"><b>📸 Memorable Moments</b><br><span>Create memories worth keeping beyond your camera roll.</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">OFFICIAL EVENT INFORMATION</div>
+      <h2>Everything you need to know.</h2>
+    </div>
+    <div class="flyer-wrap"><img src="official-flyer.jpg" alt="Official event flyer"></div>
+  </div>
+</section>
+
+<section class="support" id="support">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="container" style="position:relative;z-index:2">
+    <div class="section-head">
+      <div class="kicker">SUPPORT THE EXPERIENCE</div>
+      <h2>Your support gives you access.</h2>
+      <p class="lead">There is no fixed ticket price. The picnic operates on a support-based donation model. Donate <strong>₦1,000 or more</strong> to gain access, or give more to support the work of Decency to the World.</p>
+    </div>
+
+    <div class="payment">
+      <div class="account">
+        <h3 style="font-size:25px;margin-top:0">Make your donation</h3>
+        <p style="color:rgba(255,255,255,.7);line-height:1.6">Send your support to the account below. Your additional support helps improve the event experience and advance the work of Decency to the World.</p>
+        <div class="account-row"><small>BANK</small><strong>FairMoney</strong></div>
+        <div class="account-row"><small>ACCOUNT NAME</small><strong>Nweke Chukwudi</strong></div>
+        <div class="account-row"><small>ACCOUNT NUMBER</small><strong id="acct">8142554946</strong></div>
+        <button class="copy" onclick="copyAccount()">Copy account number</button>
+        <p style="font-size:12px;color:rgba(255,255,255,.55);margin-bottom:0">Minimum support for access: ₦1,000.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step"><div class="num">1</div><div><h3>Donate ₦1,000+</h3><p>Make your contribution using the account details provided.</p></div></div>
+        <div class="step"><div class="num">2</div><div><h3>Complete the registration form</h3><p>Enter your details carefully so the team can prepare for your attendance.</p></div></div>
+        <div class="step"><div class="num">3</div><div><h3>Upload your payment proof</h3><p>Attach your transaction proof inside the Google Form.</p></div></div>
+        <div class="step"><div class="num">4</div><div><h3>Send your payment proof</h3><p>After submitting the registration form, send your payment receipt/proof directly to the event team on WhatsApp.</p><a class="whatsapp-btn" href="https://wa.me/2348102521726?text=Hello%20Decency%20to%20the%20World%20team%2C%20I%20have%20completed%20my%20registration%20for%20the%20Beyond%20the%20Screen%20Picnic.%20I%20am%20sending%20my%20proof%20of%20payment%20for%20confirmation." target="_blank" rel="noopener">📲 Send Proof on WhatsApp</a></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="register">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">REGISTRATION</div>
+      <h2>Secure your place.</h2>
+      <p class="lead">Make your donation first, then complete the form below. Remember to upload your payment proof.</p>
+    </div>
+    <div class="form-box"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLScTYnoe8I0Mo78mBlqR-ecWaigZohqBk3heTeS_8XmqlGYZtg/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head"><div class="kicker">NEED TO KNOW</div><h2>Questions? We've got you.</h2></div>
+    <div class="faq">
+      <details><summary>Is there a fixed ticket price?</summary><p>No. The picnic uses a donation/support model. Contributions start from ₦1,000.</p></details>
+      <details><summary>What is the minimum donation?</summary><p>₦1,000. You can contribute more if you want to give additional support.</p></details>
+      <details><summary>Does my donation give me access?</summary><p>Yes. A donation of ₦1,000 or more qualifies you for access, subject to successful registration and payment verification.</p></details>
+      <details><summary>How do I register?</summary><p>Make your donation, complete the registration form and upload your payment proof.</p></details>
+      <details><summary>Can I donate more than ₦1,000?</summary><p>Yes. Additional support helps improve the event experience and advance the work of Decency to the World.</p></details>
+      <details><summary>When will the venue be announced?</summary><p>The venue will be communicated to registered participants.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="container">
+    <div class="eyebrow">DECENCY TO THE WORLD</div>
+    <h2>Your screen can connect you. But you have to show up.</h2>
+    <p>Beyond the Screen • Sunday, 20 September 2026 • 12:00 PM</p>
+    <button class="cta" onclick="goDonate()">🎉 Donate & Register</button>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand"><img src="decency-logo-round.png" alt=""><span>DECENCY TO THE WORLD</span></div>
+    <div>Transforming Lives. Restoring Decency.</div>
+    <a href="https://wa.me/2348102521726" target="_blank">WhatsApp • Payment Confirmation</a>
+  </div>
+</footer>
+
+<div class="floating"><button class="float-btn" onclick="goDonate()">🎉 DONATE & REGISTER</button></div>
+<div class="celebrate" id="celebrate"></div>
+
+<script>
+function burst(){
+  const wrap=document.getElementById('celebrate');
+  const emojis=['🎉','🥳','💜','✨','🎊','❤️'];
+  for(let i=0;i<22;i++){
+    const e=document.createElement('div');
+    e.className='emoji';
+    e.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+    e.style.left=(48+Math.random()*8)+'%';
+    e.style.top=(42+Math.random()*10)+'%';
+    e.style.setProperty('--x',((Math.random()-.5)*520)+'px');
+    e.style.setProperty('--y',((Math.random()-.7)*620)+'px');
+    e.style.setProperty('--r',((Math.random()-.5)*540)+'deg');
+    e.style.animationDelay=(Math.random()*.12)+'s';
+    wrap.appendChild(e);
+    setTimeout(()=>e.remove(),1500);
+  }
+}
+function goDonate(){
+  burst();
+  setTimeout(()=>document.getElementById('support').scrollIntoView({behavior:'smooth',block:'start'}),180);
+}
+async function copyAccount(){
+  await navigator.clipboard.writeText('8142554946');
+  const b=document.querySelector('.copy');
+  const old=b.textContent;
+  b.textContent='✓ Account number copied';
+  setTimeout(()=>b.textContent=old,1800);
+}
+</script>
+</body>
+</html>
